@@ -6,6 +6,8 @@
 }
 body{
     background-color: rgba(232,238,238);
+    background-image: url(bg.avif);
+    background-size: cover;
 }
 h1{
     font-size: 2.7rem;
@@ -57,8 +59,32 @@ ul li{
     border: 0.125px solid #a19f9f;
     padding: 6px 12px;
     background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.5s;
 }
 ul li:hover{
     background-color: #cbcaca;
+}
+
+ul li p{
+    flex-grow: 2;
+    padding: 2.5px;
+}
+.btn{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: none;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+}
+.delBtn{
+    color: #ff0000;
+}
+.edBtn{
+    color: #3da33d;
 }
 
