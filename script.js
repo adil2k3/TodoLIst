@@ -16,7 +16,6 @@ const addTodo = () =>{
             editTodo.target.previousElementSibling.innerHTML=inputText;
             addBtn.value="ADD"
             inputBox.value='';
-            addBtn.style.backgroundColor="";
             return false;
         }
         //creating p tag
@@ -57,10 +56,25 @@ const updateTodo = (e) =>{
         inputBox.value= e.target.previousElementSibling.innerHTML;
         inputBox.focus();
         addBtn.value="Edit";
-        addBtn.style.backgroundColor="skyblue";
         editTodo=e;
     }
 }
+
+
+// Toggle line-through on todo item
+
+todoList.addEventListener("click",(e)=>{
+    if(e.target.tagName==="LI"){
+        e.target.classList.toggle("checked",);
+        const p = e.target.firstElementChild;
+
+        if(p.style.textDecoration === "line-through"){
+            p.style.textDecoration="none";
+        }else{
+            p.style.textDecoration="line-through";
+        }
+    }
+})
 
 const saveLocalTodos = (todo) => {
     let todos;
