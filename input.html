@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO LIST</title>
+    <link rel="stylesheet" href="watch.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="displayWatch">
+        <div class="stopWatch">
+            <div class="pm">
+                <div  class="am">PM</div>
+            </div>
+            <div class="timer" style="color: #FFF;">00 : 00 : 00 : 00
+            </div>
+        </div>
+        <div class="info">
+            <div style="--clr:yellow;" class="in" id="day"> DAY</div>
+            <div style="--clr:yellow;" class="in"> HRS</div>
+            <div style="--clr:yellow;" class="in"> MIN</div>
+            <div style="--clr:yellow;" class="in"> SEC</div>
+         </div>
+    </div>
+
     <div class="container">
-        <div class="inputBox">
+        <div class="inputBox" style="border-radius: 10px;">
             <h1>MY TODO LIST</h1>
             <input  id="inputBox" type="text" placeholder="Add a new Todo...">
             <input type="button" value="" id="addBtn">
@@ -19,5 +36,6 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="watch.js"></script>
 </body>
 </html>
