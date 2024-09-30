@@ -152,6 +152,10 @@ ul li p{
     h1{
         background-size: 200px;
     }
+    .inputBox{
+        margin-right: 500px;
+        margin-top: 200px;
+    }
 
     .inputBox input{
         font-size: 18px;
@@ -219,17 +223,13 @@ ul li p{
         background-size: 350%;
         background-repeat: no-repeat;
     }
-}
-
-@media screen and (max-width:420px) {
-    body{
-        position: fixed;
-        background-size: 450%;
-        background-repeat: repeat;
+    .inputBox{
+        margin-right: 550px;
+        margin-top: 200px;
     }
 
-    h1{
-        background-size: 150px;
+    .container{
+        width: 350px;
     }
 
     .inputBox h1{
@@ -246,19 +246,194 @@ ul li p{
     .inputBox input[type="text"] {
         width: 35%;
         margin-top: 0px;
-        font-size: 12px;
+        font-size: 8px;
     }  
-    
+
     .inputBox input[type="button"]{
-        padding: 3px 6px;
+        padding: 2px 4px;
         background-size: 20px;
-        height: 28px;
-        width: 28px;
+        height: 24px;
+        width: 24px;
     }
 
     ul{
         width: 50%;
-        margin-left: 75px;
+        margin-left: 70px;
+    }
+
+    ul li{
+        font-size: 10px;
+        margin-block-end: 5px;
+        padding: 3px 6px;
+
+    }
+
+    ul li::before{
+        content: '';
+        height: 8px;
+        width: 8px;
+        top: 7px;
+        left: 8px;
+        border:1.5px dashed #60b160;
+    
+    }
+
+    ul li.checked::before{
+        top: 7px;
+        height: 11px;
+        width: 11px;
+    }
+
+    ul li p{
+        flex-grow: 1;
+        padding: 1.5px;
+    
+    .delBtn{
+        height: 12px;
+        width: 12px;
+    }
+    .edBtn{
+        height: 5px;
+        width: 5px;
+        margin-inline-end: 6px;
+    }
+}}
+
+@media screen and (max-width:460px) {
+    body{
+        position: fixed;
+        background-size: 450%;
+        background-repeat: repeat;
+    }
+
+    .inputBox{
+        margin-right: 700px;
+        margin-top: 200px;
+    }
+
+    .container{
+        width: 250px;
+    }
+
+
+    h1{
+        background-size: 100px;
+    }
+
+    .inputBox h1{
+        margin-left: -50px;
+        margin-bottom: 0px;
+    }
+
+    .inputBox input{
+        padding: 4px;
+        margin-block-end: 4px;
+    }
+
+    .inputBox input[type="text"] {
+        width: 35%;
+        margin-top: 0px;
+        font-size: 8px;
+    }  
+    
+    .inputBox input[type="button"]{
+        padding: -2px 0px;
+        background-size: 22px;
+        height: 24px;
+        width: 24px;
+    }
+
+    ul{
+        width: 50%;
+        margin-left: 50px;
+    }
+
+    ul li{
+        font-size: 10px;
+        margin-block-end: 5px;
+        padding: 3px 6px;
+    }
+
+    ul li::before{
+        content: '';
+        height: 8px;
+        width: 8px;
+        top: 4px;
+        left: 8px;
+        border:1.5px dashed #60b160;
+    }
+
+    ul li.checked::before{
+        top: 4px;
+        height: 11px;
+        width: 11px;
+    }
+
+    ul li p{
+        flex-grow: 1;
+        padding: 1.5px;
+    }
+    .delBtn{
+        height: 14px;
+        width: 14px;
+    }
+    .edBtn{
+        height: 10px;
+        width: 10px;
+        margin-inline-end: 6px;
+    }
+
+}
+
+@media screen and (max-width:330px) {
+    body{
+        position: fixed;
+        background-size: 450%;
+        background-repeat: repeat;
+    }
+
+    .inputBox{
+        margin-right: 820px;
+        margin-top: 200px;
+    }
+
+    .container{
+        width: 200px;
+    }
+
+
+    h1{
+        background-size: 80px;
+    }
+
+    .inputBox h1{
+        margin-left: -80px;
+        margin-bottom: 0px;
+    }
+
+    .inputBox input{
+        padding: 4px;
+        margin-block-end: 4px;
+        height: 25px;
+    }
+
+    .inputBox input[type="text"] {
+        width: 50%;
+        margin-top: 0px;
+        font-size: 6px;
+    }  
+    
+    .inputBox input[type="button"]{
+        padding: 0px 0px;
+        background-size: 50px;
+        height: 22px;
+        width: 22px;
+        margin-top: 0px;
+    }
+
+    ul{
+        width: 70%;
+        margin-left: 20px;
     }
 
     ul li{
