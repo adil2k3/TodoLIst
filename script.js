@@ -18,7 +18,7 @@ const addTodo = () =>{
             inputBox.value='';
             return false;
         }
-        //creating p tag
+        //creating li & p tag
         const li=document.createElement("li");
         const p=document.createElement("p");
         p.innerHTML=inputText;
@@ -27,13 +27,13 @@ const addTodo = () =>{
         // creating edit button
         const editBtn = document.createElement("button");
         editBtn.innerText = "Edit";
-        editBtn.classList.add("btn","edBtn");
+        editBtn.classList.add("edBtn");
         li.appendChild(editBtn);
 
          // creating delete button
          const deleteBtn = document.createElement("button");
          deleteBtn.innerText = "Remove";
-         deleteBtn.classList.add("btn","delBtn");
+         deleteBtn.classList.add("delBtn");
          li.appendChild(deleteBtn);
 
 
@@ -44,8 +44,7 @@ const addTodo = () =>{
     }
 }
 
-//function to delete and edit todo
-
+// Function to delete and edit todo
 const updateTodo = (e) =>{
     if(e.target.innerHTML==="Remove"){
     todoList.removeChild(e.target.parentElement);
@@ -62,7 +61,6 @@ const updateTodo = (e) =>{
 
 
 // Toggle line-through on todo item
-
 todoList.addEventListener("click",(e)=>{
     if(e.target.tagName==="LI"){
         e.target.classList.toggle("checked",);
@@ -76,6 +74,7 @@ todoList.addEventListener("click",(e)=>{
     }
 })
 
+// Function to save todos to local storage
 const saveLocalTodos = (todo) => {
     let todos;
     if(localStorage.getItem("todos") === null){
@@ -87,6 +86,7 @@ const saveLocalTodos = (todo) => {
     localStorage.setItem("todos",JSON.stringify(todos));
 }
 
+// Function to get todos from local storage on page load
 const getLocalTodos = () =>{
     let todos;
     if(localStorage.getItem("todos") === null){
@@ -94,7 +94,7 @@ const getLocalTodos = () =>{
     }else{
         todos=JSON.parse(localStorage.getItem("todos"));
         todos.forEach(todo => {
-        //creating p tag
+        //creating li & p tag
         const li=document.createElement("li");
         const p=document.createElement("p");
         p.innerHTML=todo;
@@ -103,13 +103,13 @@ const getLocalTodos = () =>{
         // creating edit button
         const editBtn = document.createElement("button");
         editBtn.innerText = "Edit";
-        editBtn.classList.add("btn","edBtn");
+        editBtn.classList.add("edBtn");
         li.appendChild(editBtn);
 
          // creating delete button
          const deleteBtn = document.createElement("button");
          deleteBtn.innerText = "Remove";
-         deleteBtn.classList.add("btn","delBtn");
+         deleteBtn.classList.add("delBtn");
          li.appendChild(deleteBtn);
 
 
@@ -118,6 +118,7 @@ const getLocalTodos = () =>{
     }
 }
 
+// Function to delete todos from local storage
 const deleteLocalTodos = (todo)=>{
     let todos;
     if(localStorage.getItem("todos") === null){
@@ -131,12 +132,15 @@ const deleteLocalTodos = (todo)=>{
     localStorage.setItem("todos",JSON.stringify(todos));
 }
 
+// Function to edit todos in local storage
 const editLocalTodos = (todo) =>{
    let todos=JSON.parse(localStorage.getItem("todos"));
    let todoIndex=todos.indexOf(todo);
    todos[todoIndex]=inputBox.value;
    localStorage.setItem("todos",JSON.stringify(todos));
 }
+
+// Initialize local storage and event listeners
 document.addEventListener("DOMContentLoaded",getLocalTodos);
 addBtn.addEventListener("click",addTodo);
 todoList.addEventListener("click",updateTodo);
