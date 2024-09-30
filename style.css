@@ -31,7 +31,7 @@ h1{
     flex-direction: column;
 }
 .inputBox h1{
-    margin-left: 50px;
+    margin-left:5px;
 }
 .inputBox{
     width: 100%;
@@ -51,7 +51,7 @@ h1{
 }
 .inputBox input[type="text"] {
     width: 70%;
-    border: 2px solid #b36d28;
+    box-shadow: 8px 8px 10px #000,-8px -8px 10px #000;
 }
 .inputBox input[type="button"]{
     background-color: #000;
@@ -66,11 +66,10 @@ h1{
     height: 52px;
     width: 52px;
     transition: box-shadow 0.5s;
-    border: 2px solid #b36d28;
     outline: none;
 }
 .inputBox input[type="button"]:hover{
-    box-shadow: 2px 2px 15px #FF8B17,-2px -2px 15px #FF8B17;
+    box-shadow: 8px 8px 10px #000,-8px -8px 10px #000;
 }
 ul{
     width: 100%;
@@ -89,8 +88,9 @@ ul li{
     justify-content: space-between;
     align-items: center;
     transition: box-shadow 0.5s;
-    border: 2px solid #b36d28;
+    box-shadow: 8px 8px 10px #000,-8px -8px 10px #000;
     position: relative;
+    transition: box-shadow 0.5s;
 }
 ul li:hover{
     box-shadow: 2px 2px 15px #FF8B17,-2px -2px 15px #FF8B17;
@@ -153,7 +153,7 @@ ul li p{
         background-size: 200px;
     }
     .inputBox{
-        margin-right: 500px;
+        margin-right: 50px;
         margin-top: 200px;
     }
 
@@ -224,7 +224,7 @@ ul li p{
         background-repeat: no-repeat;
     }
     .inputBox{
-        margin-right: 550px;
+        margin-right: 250px;
         margin-top: 200px;
     }
 
@@ -273,7 +273,7 @@ ul li p{
         height: 8px;
         width: 8px;
         top: 7px;
-        left: 8px;
+        left: 4px;
         border:1.5px dashed #60b160;
     
     }
@@ -307,7 +307,7 @@ ul li p{
     }
 
     .inputBox{
-        margin-right: 700px;
+        margin-right: 280px;
         margin-top: 200px;
     }
 
@@ -393,7 +393,7 @@ ul li p{
     }
 
     .inputBox{
-        margin-right: 820px;
+        margin-right: 520px;
         margin-top: 200px;
     }
 
@@ -425,9 +425,9 @@ ul li p{
     
     .inputBox input[type="button"]{
         padding: 0px 0px;
-        background-size: 50px;
-        height: 22px;
-        width: 22px;
+        background-size: 30px;
+        height: 20px;
+        width: 20px;
         margin-top: 0px;
     }
 
@@ -445,18 +445,18 @@ ul li p{
 
     ul li::before{
         content: '';
-        height: 8px;
-        width: 8px;
-        top: 4px;
-        left: 8px;
-        border:1.5px dashed #60b160;
+        height: 6px;
+        width: 6px;
+        top: 7px;
+        left: 4px;
+        border:0.5px dashed #60b160;
     
     }
 
     ul li.checked::before{
-        top: 4px;
-        height: 11px;
-        width: 11px;
+        top: 6px;
+        height: 6px;
+        width: 6px;
     }
 
     ul li p{

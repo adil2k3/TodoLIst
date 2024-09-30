@@ -63,7 +63,20 @@ body{
     padding-left: 32px;
 }
 
+/* Responsive Design */
+
+@media screen and (max-width:1000px) {
+
+    .displayWatch{
+        margin-right: 700px;
+    }
+    
+    
+}
 @media screen and (max-width:980px) {
+    .displayWatch{
+      margin-right: 700px;
+    }
     .stopWatch{
         padding: 0px 5px;    
     }
@@ -95,5 +108,43 @@ body{
         margin-right: 2px;
         padding-right: 22px;
         padding-left:22px;
-    }
+    }    
 }
+@media screen and (max-width:800px) {
+    .displayWatch{
+      margin-right: 650px;
+    }
+    .stopWatch{
+        padding: 0px 5px;    
+    }
+
+    .timer{
+        padding: 4px 2px;
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .in{
+        font-size: 5px;
+        font-weight: 700;
+        display: inline-block;
+        padding:2px 3px;
+        background-color: var(--clr);
+        color: black;
+        margin: 0px 0px;
+    }
+
+    .pm{
+        padding-top: 1px;
+    }
+    .am{
+        color: yellow;
+        font-size: 8px;
+    }
+    #day{
+        margin-right: 2px;
+        padding-right: 22px;
+        padding-left:22px;
+    }    
+}
+
