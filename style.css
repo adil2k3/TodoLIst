@@ -461,16 +461,17 @@ ul li p{
     }
 
     ul li p{
+        font-size: 6px;
         flex-grow: 1;
-        padding: 1.5px;
+        padding: 0.75px;
     }
     .delBtn{
-        height: 14px;
-        width: 14px;
-    }
-    .edBtn{
         height: 10px;
         width: 10px;
+    }
+    .edBtn{
+        height: 6px;
+        width: 6px;
         margin-inline-end: 6px;
     }
 }
