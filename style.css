@@ -393,7 +393,7 @@ ul li p{
     }
 
     .inputBox{
-        margin-right: 580px;
+        margin-right: 600px;
         margin-top: 200px;
     }
 
@@ -422,7 +422,7 @@ ul li p{
         width: 50%;
         margin-top: 0px;
         font-size: 6px;
-        margin-bottom: 80px;
+        margin-bottom: 180px;
     }  
     
     .inputBox input[type="button"]{
@@ -447,11 +447,11 @@ ul li p{
 
     ul li::before{
         content: '';
-        height: 6px;
-        width: 6px;
-        top: 7px;
+        height: 3px;
+        width: 3px;
+        top: 5px;
         left: 1px;
-        border:0.75px dashed #60b160;
+        border:0.5px dashed #60b160;
     }
 
     ul li.checked::before{
